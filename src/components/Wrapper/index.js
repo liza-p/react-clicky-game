@@ -6,7 +6,7 @@ function Card(props) {
     <div className="col-12 col-sm-3">
       <div className="card mb-4" >
         <div className="text-center">
-          <img src={'/img/' + props.card.img} 
+          <img src={'img/' + props.card.img} 
           className="card-img-top p-2" alt="" 
           style={{width:"150px", height: "150px"}} 
           onClick={() => props.onSelect(props.card.id)}/>
@@ -38,7 +38,7 @@ function Wrapper(props) {
     <div>
       <div className="jumbotron jumbotron-fluid pt-0">
         <div className="container">
-          <img src="/img/central-perk.jpg" style={{height: '200px'}}/>
+          <img src="img/central-perk.jpg" style={{height: '200px'}}/>
           <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
         </div>
       </div>
