@@ -1,0 +1,8 @@
+.navbar {
+  background: url('/img/brick-tile.jpg') repeat;
+  font-weight: bold;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}
