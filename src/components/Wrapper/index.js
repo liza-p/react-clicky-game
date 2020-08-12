@@ -1,26 +1,33 @@
 import React from "react";
 import "./style.css";
 
-function Card() {
+function Card(props) {
   return (
     <div className="col-12 col-sm-3">
       <div className="card mb-4" >
         <div className="text-center">
-          <img src="/img/mrtreeger.jpg" className="card-img-top p-2" alt="" style={{width:"100%", height: "100%"}} />
+          <img src={'/img/' + props.card.img} 
+          className="card-img-top p-2" alt="" 
+          style={{width:"150px", height: "150px"}} 
+          onClick={() => props.onSelect(props.card.id)}/>
         </div>
       </div>
     </div>
   )
 }
 
-function Cards() {
+function Cards(props) {
   return (
   <div className="container" style={{width:"800px"}}>
-    <div class="row">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+    <div className="row">
+      {
+        props.imgCards.map(function(card){
+          return (
+            <Card key= {card.id} card={card} onSelect={props.onSelect}/>
+          )
+        })
+      }
+      
     </div>
   </div>
   )
@@ -29,13 +36,13 @@ function Cards() {
 function Wrapper(props) {
   return (
     <div>
-      <div className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid pt-0">
         <div className="container">
-          <h1 className="display-4">Clicky Game!</h1>
+          <img src="/img/central-perk.jpg" style={{height: '200px'}}/>
           <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
         </div>
       </div>
-      <Cards />
+      <Cards imgCards={props.imgCards} onSelect={props.onSelect}/>
     </div>
   )
 }
