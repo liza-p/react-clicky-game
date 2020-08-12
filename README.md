@@ -1,5 +1,5 @@
 # react-clicky-game
-Its a memory game with React. The application dynamically reads all images from Assets folder and displays as card. On click of each image, score will be calculated. The user's score is incremented when clicking an image for the first time. The user's score is reset to 0 if they click the same image more than once.
+Its a memory game with React. The application dynamically reads all images from Public folder and displays as card. On click of each image, score will be calculated. The user's score is incremented when clicking an image for the first time. The user's score is reset to 0 if same image is clicked more than once.
 Here are some of the highlights:
 - Uses create-react-app to generate the react application
 - Has modularised components
