@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Nav from './components/Navbar';
 import Wrapper from './components/Wrapper';
+import Footer from './components/Footer';
 import './App.css';
 
 let clickedImageIds = [];
@@ -49,6 +50,7 @@ function App() {
     <div className="App">
       <Nav message={message} score={score} />
       <Wrapper imgCards={imgCards} onSelect={onSelect}/>
+      <Footer/>
     </div>
   );
 }
